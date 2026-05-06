@@ -1,0 +1,18 @@
+@use "../abstracts" as core;
+
+.social-icon {
+    img {
+        width: 2rem;
+        height: 2rem;
+        transition: transform 0.2s;
+    }
+
+    .social-icon--instagram {
+        width: 2.4rem;
+        height: 2.4rem;
+    }
+
+    &:hover img {
+        transform: scale(1.2);
+    }
+}

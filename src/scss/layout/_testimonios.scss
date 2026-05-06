@@ -1,0 +1,30 @@
+@use "../abstracts" as core;
+
+.testimonios {
+    padding: 6rem 0;
+    background-color: #f9f9f9;
+
+    @include core.media("medium") {
+        padding: 4rem 0;
+    }
+
+    @include core.media("small") {
+        padding: 3rem 0;
+    }
+
+    .section-title {
+        margin-bottom: 2.5rem;
+    }
+
+    &__grid {
+        @include core.grid-fixeado(3, 2rem);
+
+        @include core.media("medium") {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include core.media("small") {
+            grid-template-columns: 1fr;
+        }
+    }
+}

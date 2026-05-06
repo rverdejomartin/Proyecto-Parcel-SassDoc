@@ -1,0 +1,27 @@
+@use "../abstracts" as core;
+
+.destinos {
+    width: 100%;
+    padding: 4rem 0;
+    background-color: core.color("white");
+
+    @include core.media("medium") {
+        padding: 3rem 0;
+    }
+
+    @include core.media("small") {
+        padding: 2rem 0;
+    }
+
+    &__grid {
+        @include core.grid-fixeado(3, 2rem);
+
+        @include core.media("medium") {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include core.media("small") {
+            grid-template-columns: 1fr;
+        }
+    }
+}

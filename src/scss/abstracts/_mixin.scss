@@ -1,0 +1,84 @@
+//// Proyecto: Ejemplo sassdoc
+//// @author rverdejomartin
+
+@use "./variables" as vars;
+@use "sass:map";
+
+/// Mixin para crear layouts rápidos flex.
+/// @group Layout
+/// @param {String} $direction [row] - Dirección del flex.
+/// @param {String} $justify [center] - Alineación horizontal.
+/// @param {String} $align [center] - Alineación vertical.
+/// @param {Length} $gap [0] - Espacio entre elementos.
+/// @example scss
+/// .header__container {
+///     @include core.flex(row, space-between, center, 2rem);
+/// }
+@mixin flex($direction: row, $justify: center, $align: center, $gap: 0){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+
+/// Mixin para generar un grid adaptable, principalmente para los cards de los destinos
+/// El uso de auto-fit nos permite un responsivo automatico
+/// @group Layout
+/// @param {Length} $min-size [30rem] - Tamaño minimo de columna.
+/// @param {Length} $gap [2rem] - Separación entre cuadrícula
+@mixin grid-auto($min-size: 30rem, $gap: 2rem){
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($min-size, 1fr));
+    gap: $gap;
+}
+
+/// Mixin grid para columnas fijas para testimonios
+/// @group Layout
+/// @param {Number} $columns [3].
+/// @param {Length} $gap [2rem].
+@mixin grid-fixeado($columns: 3, $gap: 2rem){
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    gap: $gap;
+}
+
+/// Contenedor para centrar la vista del contenido en la pantalla
+/// @group Layout
+@mixin contenedor{
+    width: 90%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+/// Mixin para gestionar la media query
+/// @group Medias
+/// @param {String} $clave - Nombre del breakpoint en el map (small, medium, large, etc)
+/// @example scss
+/// .card{
+///     @include core.media(medium){
+///         width: 100%;
+///     }
+/// }
+@mixin media($clave){
+    $size: vars.size($clave);
+
+    @media screen and (max-width: $size){
+        @content;
+    }
+}
+
+/// Estilo base para los cards
+/// @group Components
+@mixin card-base{
+    background-color: vars.color("white");
+    border-radius: 0.8rem;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    }
+}

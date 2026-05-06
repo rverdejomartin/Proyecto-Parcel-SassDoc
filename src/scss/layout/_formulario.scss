@@ -1,0 +1,45 @@
+@use "../abstracts" as core;
+
+.reserva {
+    padding: 5rem 0;
+
+    @include core.media("medium") {
+        padding: 3rem 0;
+    }
+
+    @include core.media("small") {
+        padding: 2rem 0;
+    }
+
+    &__title {
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: core.font-size("xl");
+
+        @include core.media("small") {
+            font-size: core.font-size("l");
+        }
+    }
+}
+
+.form {
+    max-width: 1000px;
+    margin: 0 auto;
+    @include core.flex(column, center, stretch, 1.2rem);
+
+    @include core.media("medium") {
+        max-width: 90%;
+    }
+
+    @include core.media("small") {
+        max-width: 100%;
+    }
+
+    &__group {
+        @include core.flex(column, center, flex-start, 0.4rem);
+
+        input {
+            width: 100%;
+        }
+    }
+}

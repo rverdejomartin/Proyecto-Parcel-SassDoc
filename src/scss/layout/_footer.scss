@@ -1,0 +1,27 @@
+@use "../abstracts" as core;
+
+.footer {
+    padding: 2rem 0;
+    background-color: core.color("footer");
+
+    .container {
+        @include core.flex(row, space-between, center);
+
+        @include core.media("medium") {
+            @include core.flex(column, center, center, 1.5rem);
+        }
+    }
+
+    &__legal {
+        @include core.flex(row, flex-start, center, 1.5rem);
+
+        @include core.media("small") {
+            @include core.flex(column, center, center, 0.8rem);
+            text-align: center;
+        }
+    }
+
+    &__rrss {
+        @include core.flex(row, flex-end, center, 1rem);
+    }
+}

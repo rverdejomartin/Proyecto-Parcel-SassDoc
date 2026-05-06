@@ -1,0 +1,47 @@
+@use "../abstracts" as core;
+
+.header {
+    background-color: core.color("primary");
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    padding: 0.5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    .container {
+        @include core.flex(row, space-between, center);
+        max-width: 1600px;
+        margin: 0 auto;
+
+        @include core.media("medium") {
+            @include core.flex(column, center, center, 0.5rem);
+            padding: 0.5rem 0;
+        }
+    }
+}
+
+.logo {
+    margin-left: 0.5rem;
+
+    img{
+        max-width: 150px;
+        height: auto;
+        flex-shrink: 0;
+    }
+}
+
+.nav {
+    &__list {
+        @include core.flex(row, center, center, 2.5rem);
+
+        @include core.media("medium") {
+            gap: 1.5rem;
+        }
+
+        @include core.media("small") {
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+}

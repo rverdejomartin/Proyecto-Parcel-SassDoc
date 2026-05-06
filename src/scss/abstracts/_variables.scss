@@ -1,0 +1,80 @@
+////
+/// Proyecto: Dashboard de Viajes
+/// @author rverdejomartin
+////
+
+@use "sass:map";
+
+/// Paleta de colores del proyecto.
+/// Se utiliza mediante la función color($name).
+/// @group Colores
+/// @type Map
+/// @prop {Color} primary [#1a5f7a] - Azul profundo
+/// @prop {Color} secondary [#159895] - Turquesa.
+/// @prop {Color} accent [#eb6440] - Naranja vibrante.
+/// @prop {Color} background [#f8f9fa] - Gris muy claro.
+/// @prop {Color} text [#2c3333] - Gris oscuro.
+/// @prop {Color} light [#f5f0e8] - Crema suave.
+/// @prop {Color} white [#ffffff] - Blanco puro.
+/// @prop {Color} gray [#b8c4bb] - Gris medio.
+$colors: (
+    "primary": #1a5f7a,
+    "secondary": #15989669,
+    "accent": #eb6440,
+    "background": #f8f9fa,
+    "text": #2c3333,
+    "light": #f5f0e8,
+    "white": #ffffff,
+    "gray": #b8c4bb,
+    "footer": #1a8a87
+);
+
+/// Puntos de ruptura para el diseño responsivo.
+/// @group Tamaños
+/// @type Map
+$sizes: (
+    "small": 576px,
+    "medium": 768px,
+    "large": 992px,
+    "xlarge": 1200px,
+    "xxlarge": 1440px
+);
+
+/// Escala tipográfica en unidades REM.
+/// @group FontsSizes
+/// @type Map
+$font-sizes: (
+    "xs": 1.6rem,
+    "s": 1.8rem,
+    "m": 2rem,
+    "l": 2.5rem,
+    "xl": 3rem,
+    "xxl": 6rem
+);
+
+/// Obtiene un color del mapa $colors.
+/// @group Colores
+/// @param {String} $name - Nombre de la clave del color.
+/// @return {Color} - Valor hexadecimal.
+@function color($name) {
+    @if not map.has-key($colors, $name) {
+        @warn "La clave '#{$name}' no existe en el mapa $colors.";
+    }
+
+    @return map.get($colors, $name);
+}
+
+/// Obtiene un tamaño de fuente del mapa $font-sizes.
+/// @group FontsSizes
+/// @param {String} $size - Clave del tamaño (xs, s, m, l, xl, xxl).
+/// @return {Length} - Valor en rem.
+@function font-size($size) {
+    @return map.get($font-sizes, $size);
+}
+
+/// Obtiene un breakpoint del mapa $sizes.
+/// @group Tamaños
+/// @param {String} $size - Clave del breakpoint.
+@function size($size) {
+    @return map.get($sizes, $size);
+}

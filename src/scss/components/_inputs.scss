@@ -1,0 +1,31 @@
+@use "../abstracts" as core;
+
+.form{
+    background-color: core.color("secondary");
+    padding: 3rem;
+    border-radius: 1rem;
+
+    &__label{
+        font-size: core.font-size("xs");
+        font-weight: 600;
+        color: core.color("text");
+    }
+
+    &__input{
+        padding: 0.75rem 1rem;
+        border: 2px solid core.color("gray");
+        border-radius: 8px;
+        font-size: core.font-size("xs");
+        color: core.color("text");
+        transition: border-color 0.2s;
+
+        &__focus{
+            outline: none;
+            border-color: core.color("primary");
+        }
+
+        &::placeholder{
+            color: core.color("gray");
+        }
+    }
+}

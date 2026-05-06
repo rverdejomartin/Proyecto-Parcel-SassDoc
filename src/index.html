@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viaje Express</title>
+    <link rel="stylesheet" href="./scss/styles.scss">
+    <link rel="icon" type="image/png" href="../src/assets/img/logo.png">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="./assets/img/logo.png" alt="Logotipo">
+            </div>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a href="#hero">Inicio</a></li>
+                    <li><a href="#destinos">Destinos</a></li>
+                    <li><a href="#testimonios">Experiencias</a></li>
+                    <li><a href="#reserva">Reserva</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- SECCIÓN 1: HERO -->
+        <section id="hero" class="hero c-hero">
+            <div class="container">
+                <h1 class="c-hero__title">Viaja y disfruta</h1>
+                <p class="c-hero__text">Encuentra viajes a destinos paradisiacos junto a nosotros</p>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: CARDS (DESTINOS) -->
+        <section id="destinos" class="destinos">
+            <div class="container">
+                <div class="destinos__grid">
+        
+                    <article class="card">
+                        <div class="card__image-container">
+                            <img src="./assets/img/cancun.jpg" alt="Cancún" class="card__img">
+                            <div class="card__fav-cont">
+                                <input type="checkbox" id="fav1" class="card__checkbox">
+                                <label for="fav1" class="card__label">
+                                    <img src="./assets/icons/heart-svgrepo-com.svg" alt="Fav" class="card__icon-svg">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="card__content">
+                            <h3 class="card__title">Cancún - México</h3>
+                            <p class="card__desc">Aguas turquesas y arena blanca en el corazón del Caribe mexicano.</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card__image-container">
+                            <img src="./assets/img/alhambra.jpg" alt="Alhambra" class="card__img">
+                            <div class="card__fav-cont">
+                                <input type="checkbox" id="fav2" class="card__checkbox">
+                                <label for="fav2" class="card__label">
+                                    <img src="./assets/icons/heart-svgrepo-com.svg" alt="Fav" class="card__icon-svg">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="card__content">
+                            <h3 class="card__title">Alhambra - España</h3>
+                            <p class="card__desc">Un viaje en el tiempo a través de la joya del arte nazarí en Granada.</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card__image-container">
+                            <img src="./assets/img/ibiza.jpg" alt="Ibiza" class="card__img">
+                            <div class="card__fav-cont">
+                                <input type="checkbox" id="fav3" class="card__checkbox">
+                                <label for="fav3" class="card__label">
+                                    <img src="./assets/icons/heart-svgrepo-com.svg" alt="Fav" class="card__icon-svg">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="card__content">
+                            <h3 class="card__title">Ibiza - España</h3>
+                            <p class="card__desc">El equilibrio perfecto entre calas vírgenes y la mejor vida nocturna.</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card__image-container">
+                            <img src="./assets/img/manhattan.jpg" alt="Manhattan" class="card__img">
+                            <div class="card__fav-cont">
+                                <input type="checkbox" id="fav4" class="card__checkbox">
+                                <label for="fav4" class="card__label">
+                                    <img src="./assets/icons/heart-svgrepo-com.svg" alt="Fav" class="card__icon-svg">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="card__content">
+                            <h3 class="card__title">Manhattan - New York</h3>
+                            <p class="card__desc">La energía imparable de la ciudad que nunca duerme y sus rascacielos.</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card__image-container">
+                            <img src="./assets/img/paris.jpg" alt="París" class="card__img">
+                            <div class="card__fav-cont">
+                                <input type="checkbox" id="fav5" class="card__checkbox">
+                                <label for="fav5" class="card__label">
+                                    <img src="./assets/icons/heart-svgrepo-com.svg" alt="Fav" class="card__icon-svg">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="card__content">
+                            <h3 class="card__title">París - Francia</h3>
+                            <p class="card__desc">Romance, arte y alta gastronomía bajo la mirada de la Torre Eiffel.</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card__image-container">
+                            <img src="./assets/img/teotihuacan.jpeg" alt="Teotihuacán" class="card__img">
+                            <div class="card__fav-cont">
+                                <input type="checkbox" id="fav6" class="card__checkbox">
+                                <label for="fav6" class="card__label">
+                                    <img src="./assets/icons/heart-svgrepo-com.svg" alt="Fav" class="card__icon-svg">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="card__content">
+                            <h3 class="card__title">Teotihuacán - México</h3>
+                            <p class="card__desc">La majestuosidad de las pirámides en la ciudad de los dioses.</p>
+                        </div>
+                    </article>
+        
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: TESTIMONIOS -->
+        <section id="testimonios" class="testimonios">
+            <div class="container">
+                <h2 class="section-title">Lo que dicen nuestros viajeros</h2>
+                <div class="testimonios__grid">
+                    <article class="testimonial">
+                        <header class="testimonial__header">
+                            <img src="../src/assets/img/gatopfp.jpg" alt="Cliente1" class="testimonial__avatar">
+                            <div class="testimonial__info">
+                                <h4 class="testimonial__name">Cliente 1</h4>
+                                <p class="testimonial__role">Viajero Frecuente</p>
+                            </div>
+                        </header>
+                    
+                        <blockquote class="testimonial__content">
+                            <p>"Un viaje muy entretenido como siempre."</p>
+                        </blockquote>
+                    </article>
+                    <article class="testimonial">
+                        <header class="testimonial__header">
+                            <img src="../src/assets/img/gato2pfp.jpg" alt="Cliente2" class="testimonial__avatar">
+                            <div class="testimonial__info">
+                                <h4 class="testimonial__name">Cliente 2</h4>
+                                <p class="testimonial__role">Nuevo viajero.</p>
+                            </div>
+                        </header>
+                    
+                        <blockquote class="testimonial__content">
+                            <p>"Para ser la primera experiencia con la empresa han sido resultados excelentes."</p>
+                        </blockquote>
+                    </article>
+                    <article class="testimonial">
+                        <header class="testimonial__header">
+                            <img src="../src/assets/img/gato3pfp.jpg" alt="Cliente3" class="testimonial__avatar">
+                            <div class="testimonial__info">
+                                <h4 class="testimonial__name">Cliente 3</h4>
+                                <p class="testimonial__role">Usuario en la nube</p>
+                            </div>
+                        </header>
+                    
+                        <blockquote class="testimonial__content">
+                            <p>"Quiero info para un siguiente viaje!!!!"</p>
+                        </blockquote>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 4: FORMULARIO -->
+        <section id="reserva" class="reserva">
+            <div class="container">
+                <h2 class="reserva__title">Reserva tu viaje</h2>
+                <form class="form">
+                    <div class="form__group">
+                        <label class="form__label" for="email">Correo electrónico</label>
+                        <input class="form__input" id="email" type="email" placeholder="tu@correo.com">
+                    </div>
+                    <div class="form__group">
+                        <label class="form__label" for="viajeros">Número de viajeros</label>
+                        <input class="form__input" id="viajeros" type="number" placeholder="1" min="1">
+                    </div>
+                    <div class="form__group">
+                        <label class="form__label" for="destino">Zona de destino</label>
+                        <input class="form__input" id="destino" type="text" placeholder="Ej: Caribe">
+                    </div>
+                    <div class="form__group">
+                        <label class="form__label" for="fecha">Fecha de viaje</label>
+                        <input class="form__input" id="fecha" type="date">
+                    </div>
+                    <button class="btn" type="button">Enviar reserva</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__legal">
+                <a href="#" class="footer-link">Avisos Legales</a>
+                <a href="#" class="footer-link">Políticas de la empresa</a>
+            </div>
+            <div class="footer__rrss">
+                <a href="#" class="social-icon"><img src="../src/assets/icons/instagram-1-svgrepo-com (2).svg" alt="Instagram" class="social-icon--instagram"></a>
+                <a href="#" class="social-icon"><img src="../src/assets/icons/facebook-color-svgrepo-com.svg" alt="Facebook"></a>
+                <a href="#" class="social-icon"><img src="../src/assets/icons/tiktok-logo-logo-svgrepo-com.svg" alt="TikTok"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/main.js" type="module"></script>
+</body>
+</html>

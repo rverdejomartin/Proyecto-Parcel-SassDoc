@@ -1,0 +1,12 @@
+@use "../abstracts" as core;
+
+.footer-link {
+    color: core.color("text");
+    font-size: core.font-size("xs");
+    text-decoration: none;
+    transition: color 0.2s;
+
+    &:hover {
+        color: core.color("white");
+    }
+}

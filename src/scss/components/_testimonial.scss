@@ -1,0 +1,52 @@
+@use "../abstracts" as core;
+
+.testimonial {
+    background-color: core.color("light");
+    padding: 1.5rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+    @include core.flex(column, flex-start, stretch, 1rem);
+
+    &__header {
+        @include core.flex(row, flex-start, center, 0.8rem);
+    }
+
+    &__avatar {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.2;
+    }
+
+    &__name {
+        font-size: 1rem;
+        font-weight: bold;
+        color: core.color("primary");
+        margin: 0;
+    }
+
+    &__role {
+        font-size: 0.8rem;
+        color: #666;
+        margin: 0;
+    }
+
+    &__content {
+        margin: 0;
+        padding-top: 0.5rem;
+        border-top: 1px solid #eee;
+
+        p {
+            font-style: italic;
+            font-size: 0.95rem;
+            color: core.color("text");
+            line-height: 1.5;
+        }
+    }
+}

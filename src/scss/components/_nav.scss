@@ -1,0 +1,37 @@
+@use "../abstracts" as core;
+
+.nav {
+    &__list {
+        list-style: none;
+
+        a {
+            color: core.color("white");
+            font-size: core.font-size("xs");
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            position: relative;
+            text-decoration: none;
+
+            
+            &::after {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 2px;
+                bottom: -5px;
+                left: 0;
+                background-color: core.color("secondary");
+                transition: width 0.3s ease;
+            }
+
+            &:hover {
+                color: core.color("secondary");
+
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

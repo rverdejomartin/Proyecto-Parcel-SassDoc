@@ -1,0 +1,21 @@
+@use "../abstracts" as core;
+
+.c-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+        url('../assets/img/fondo-hero.jpg'); 
+    background-size: cover;
+    background-position: center;
+
+    &__title {
+        color: core.color("white");
+        font-size: core.font-size("xxl");
+        font-weight: 800;
+        text-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    }
+
+    &__text {
+        color: core.color("white");
+        font-size: core.font-size("l");
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    }
+}

@@ -1,0 +1,17 @@
+@use "../abstracts" as core;
+
+.btn {
+    padding: 0.9rem 2rem;
+    background-color: core.color("accent");
+    color: core.color("white");
+    border: none;
+    border-radius: 8px;
+    font-size: core.font-size("s");
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover {
+        background-color: core.color("primary");
+    }
+}

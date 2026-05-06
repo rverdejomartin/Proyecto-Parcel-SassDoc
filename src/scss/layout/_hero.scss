@@ -1,0 +1,31 @@
+@use "../abstracts" as core;
+
+.hero {
+    width: 100%;
+    min-height: 90vh;
+    margin-bottom: 5rem;
+    @include core.flex(column, center, center);
+    position: relative;
+    overflow: hidden;
+
+    .container {
+        @include core.flex(column, center, center, 2rem);
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .container>*:first-child {
+        margin-top: 0;
+    }// Evita el hueco blanco por colapso de márgenes del h1 buscado con IA
+
+    @include core.media("medium") {
+        height: 70vh;
+        margin-bottom: 3rem;
+    }
+
+    @include core.media("small") {
+        height: 60vh;
+        margin-bottom: 2rem;
+    }
+}
