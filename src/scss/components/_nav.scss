@@ -21,12 +21,12 @@
                 height: 2px;
                 bottom: -5px;
                 left: 0;
-                background-color: core.color("secondary");
+                background-color: core.color("accent");
                 transition: width 0.3s ease;
             }
 
             &:hover {
-                color: core.color("secondary");
+                color: core.color("accent");
 
                 &::after {
                     width: 100%;
