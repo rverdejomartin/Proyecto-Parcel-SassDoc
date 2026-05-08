@@ -74,11 +74,33 @@
     background-color: vars.color("white");
     border-radius: 0.8rem;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     &:hover {
         transform: translateY(-10px);
-        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+    }
+}
+
+
+/// Aplica estilos de validación al input según su estado.
+/// Usa las pseudoclases :valid e :invalid para detectar el contenido
+/// sin necesidad de JavaScript.
+/// El :not(:placeholder-shown) evita que los estilos se apliquen
+/// en inputs vacíos al cargar la página.
+/// @group Formulario
+/// @output Borde verde cuando el input es válido, rojo cuando es inválido.
+/// @example scss
+///   .reserva__input {
+///     @include input-validation;
+///   }
+@mixin input-validation {
+    &:valid:not(:placeholder-shown) {
+        border-color: vars.color("success");
+    }
+
+    &:invalid:not(:placeholder-shown) {
+        border-color: vars.color("error");
     }
 }

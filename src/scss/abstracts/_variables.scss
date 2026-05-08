@@ -7,26 +7,32 @@
 
 /// Paleta de colores del proyecto.
 /// Se utiliza mediante la función color($name).
+/// Colores extraídos del logotipo de ViajeExpress.
 /// @group Colores
 /// @type Map
-/// @prop {Color} primary [#1a5f7a] - Azul profundo
-/// @prop {Color} secondary [#159895] - Turquesa.
-/// @prop {Color} accent [#eb6440] - Naranja vibrante.
+/// @prop {Color} primary [#2d4fa1] - Azul del globo terráqueo del logo.
+/// @prop {Color} secondary [#1a3a5c] - Azul oscuro para fondos de sección.
+/// @prop {Color} accent [#f5a623] - Naranja del inicio del trazo del logo.
 /// @prop {Color} background [#f8f9fa] - Gris muy claro.
-/// @prop {Color} text [#2c3333] - Gris oscuro.
+/// @prop {Color} text [#1a1a1a] - Negro del texto del logo.
 /// @prop {Color} light [#f5f0e8] - Crema suave.
 /// @prop {Color} white [#ffffff] - Blanco puro.
 /// @prop {Color} gray [#b8c4bb] - Gris medio.
+/// @prop {Color} footer [#1a1f2e] - Azul muy oscuro para el footer.
+/// @prop {Color} success [#2e7d52] - Verde para validación correcta.
+/// @prop {Color} error [#c0392b] - Rojo para validación incorrecta.
 $colors: (
-    "primary": #1a5f7a,
-    "secondary": #15989669,
-    "accent": #eb6440,
+    "primary": #2d4fa1,
+    "secondary": #1a3a5c,
+    "accent": #f5a623,
     "background": #f8f9fa,
-    "text": #2c3333,
+    "text": #1a1a1a,
     "light": #f5f0e8,
     "white": #ffffff,
     "gray": #b8c4bb,
-    "footer": #1a8a87
+    "footer": #1a1f2e,
+    "success": #24e77c,
+    "error": #c0392b
 );
 
 /// Puntos de ruptura para el diseño responsivo.
@@ -40,16 +46,22 @@ $sizes: (
     "xxlarge": 1440px
 );
 
-/// Escala tipográfica en unidades REM.
+/// Escala tipográfica fluida con clamp().
 /// @group FontsSizes
 /// @type Map
+/// @prop {Length} xs [clamp(0.8rem, 1.5vw, 1rem)] - Texto muy pequeño. Ej: labels, pie de página.
+/// @prop {Length} s [clamp(0.9rem, 2vw, 1.125rem)] - Texto pequeño. Ej: citas, descripciones cortas.
+/// @prop {Length} m [clamp(1rem, 2.5vw, 1.25rem)] - Cuerpo de texto general.
+/// @prop {Length} l [clamp(1.25rem, 3vw, 1.75rem)] - Subtítulos, taglines.
+/// @prop {Length} xl [clamp(1.5rem, 4vw, 2.5rem)] - Títulos de sección (h2, h3).
+/// @prop {Length} xxl [clamp(2.5rem, 6vw, 5rem)] - Título hero principal (h1).
 $font-sizes: (
-    "xs": 1.6rem,
-    "s": 1.8rem,
-    "m": 2rem,
-    "l": 2.5rem,
-    "xl": 3rem,
-    "xxl": 6rem
+    "xs": clamp(0.8rem, 1.5vw, 1rem),
+    "s": clamp(0.9rem, 2vw, 1.125rem),
+    "m": clamp(1rem, 2.5vw, 1.25rem),
+    "l": clamp(1.25rem, 3vw, 1.75rem),
+    "xl": clamp(1.5rem, 4vw, 2.5rem),
+    "xxl": clamp(2.5rem, 6vw, 5rem)
 );
 
 /// Obtiene un color del mapa $colors.

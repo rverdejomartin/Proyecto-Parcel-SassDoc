@@ -10,8 +10,15 @@
     font-weight: 700;
     cursor: pointer;
     transition: background-color 0.2s;
+    width: fit-content;
+    display: block;
+    margin: 0 auto;
 
     &:hover {
         background-color: core.color("primary");
+    }
+
+    @include core.media("small") {
+        width: 100%;
     }
 }

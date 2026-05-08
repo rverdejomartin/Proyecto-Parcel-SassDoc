@@ -162,7 +162,7 @@
                             <img src="../src/assets/img/gato2pfp.jpg" alt="Cliente2" class="testimonial__avatar">
                             <div class="testimonial__info">
                                 <h4 class="testimonial__name">Cliente 2</h4>
-                                <p class="testimonial__role">Nuevo viajero.</p>
+                                <p class="testimonial__role">Nuevo viajero</p>
                             </div>
                         </header>
                     
@@ -194,21 +194,21 @@
                 <form class="form">
                     <div class="form__group">
                         <label class="form__label" for="email">Correo electrónico</label>
-                        <input class="form__input" id="email" type="email" placeholder="tu@correo.com">
+                        <input class="form__input" id="email" type="email" placeholder="tu@correo.com" required>
                     </div>
                     <div class="form__group">
                         <label class="form__label" for="viajeros">Número de viajeros</label>
-                        <input class="form__input" id="viajeros" type="number" placeholder="1" min="1">
+                        <input class="form__input" id="viajeros" type="number" placeholder="1" min="1" max="99" required>
                     </div>
                     <div class="form__group">
                         <label class="form__label" for="destino">Zona de destino</label>
-                        <input class="form__input" id="destino" type="text" placeholder="Ej: Caribe">
+                        <input class="form__input" id="destino" type="text" placeholder="Ej: Caribe" required>
                     </div>
                     <div class="form__group">
                         <label class="form__label" for="fecha">Fecha de viaje</label>
-                        <input class="form__input" id="fecha" type="date">
+                        <input class="form__input" id="fecha" type="date" required>
                     </div>
-                    <button class="btn" type="button">Enviar reserva</button>
+                    <button class="btn" type="button">Enviar</button>
                 </form>
             </div>
         </section>
@@ -229,6 +229,6 @@
         </div>
     </footer>
 
-    <script src="./js/main.js" type="module"></script>
+    <script src="./assets/js/main.js" type="module"></script>
 </body>
 </html>

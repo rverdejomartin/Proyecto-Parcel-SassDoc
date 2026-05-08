@@ -8,10 +8,11 @@
     &__label{
         font-size: core.font-size("xs");
         font-weight: 600;
-        color: core.color("text");
+        color: core.color("light");
     }
 
     &__input{
+        @include core.input-validation();
         padding: 0.75rem 1rem;
         border: 2px solid core.color("gray");
         border-radius: 8px;

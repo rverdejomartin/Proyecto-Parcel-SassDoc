@@ -1,10 +1,15 @@
 @use "../abstracts" as core;
 
 .testimonial {
+    
     background-color: core.color("light");
-    padding: 1.5rem;
     border-radius: 0.8rem;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+    padding: 2.5rem;
+    
+    @include core.media("small") {
+        padding: 1.5rem;
+    }
     @include core.flex(column, flex-start, stretch, 1rem);
 
     &__header {
